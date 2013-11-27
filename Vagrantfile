@@ -74,7 +74,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       'recipe[ruby_build]',
       'recipe[rbenv::user]',
       'recipe[zsh]',
-      'recipe[oh-my-zsh-chef]',
+      'recipe[oh-my-zsh]',
       'recipe[postgresql]',
       'recipe[tmux]'
     ]
