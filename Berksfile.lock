@@ -1,0 +1,82 @@
+{
+  "sources": {
+    "apt": {
+      "locked_version": "2.3.0"
+    },
+    "git": {
+      "locked_version": "2.7.0"
+    },
+    "build-essential": {
+      "locked_version": "1.4.2"
+    },
+    "zlib": {
+      "locked_version": "2.0.0",
+      "git": "git://github.com/opscode-cookbooks/zlib",
+      "ref": "45342f78d2866c3b2f443e693df562317e37963d"
+    },
+    "rbenv": {
+      "locked_version": "0.7.2",
+      "git": "git://github.com/fnichol/chef-rbenv.git",
+      "ref": "f2b53292e810dd2b43f6121f9958f5f29979dcb1"
+    },
+    "postgresql": {
+      "locked_version": "3.2.0",
+      "git": "git://github.com/opscode-cookbooks/postgresql.git",
+      "ref": "6fab69b942f6503aec0490026ca0507613a31f75"
+    },
+    "zsh": {
+      "locked_version": "1.0.0",
+      "git": "git://github.com/opscode-cookbooks/zsh.git",
+      "ref": "1.0.0"
+    },
+    "tmux": {
+      "locked_version": "1.4.0",
+      "git": "git://github.com/opscode-cookbooks/tmux.git",
+      "ref": "25e988c9261788446e74aab53893fc9999471ee4"
+    },
+    "ruby_build": {
+      "locked_version": "0.8.0",
+      "git": "git://github.com/fnichol/chef-ruby_build.git",
+      "ref": "ed2d3841784ecf60c1de808946307b588efe644f"
+    },
+    "users": {
+      "locked_version": "1.5.3",
+      "git": "git://github.com/opscode-cookbooks/users.git",
+      "ref": "3d4576ef4463e514e8c5d27b59bb8edaade4c7b4"
+    },
+    "chef-solo-search": {
+      "locked_version": "0.5.1",
+      "git": "git://github.com/edelight/chef-solo-search.git",
+      "ref": "681f78a108f5f8a3655551b32d9939603628c568"
+    },
+    "dotfiles": {
+      "locked_version": "0.1.0",
+      "git": "https://github.com/blazeroot/dotfiles-cookbook",
+      "ref": "f09720de069916031eeb5146ee354ee1ac2cd320"
+    },
+    "dmg": {
+      "locked_version": "2.0.8"
+    },
+    "yum": {
+      "locked_version": "2.4.2"
+    },
+    "windows": {
+      "locked_version": "1.11.0"
+    },
+    "chef_handler": {
+      "locked_version": "1.1.4"
+    },
+    "runit": {
+      "locked_version": "1.4.0"
+    },
+    "java": {
+      "locked_version": "1.15.4"
+    },
+    "aws": {
+      "locked_version": "1.0.0"
+    },
+    "openssl": {
+      "locked_version": "1.1.0"
+    }
+  }
+}

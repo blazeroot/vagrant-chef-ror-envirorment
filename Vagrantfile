@@ -16,36 +16,26 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.network :forwarded_port, guest: 3000, host:3030
 
-  config.librarian_chef.cheffile_dir = 'chef'
+  config.berkshelf.enabled = true
 
   config.vm.provision :chef_solo do |chef|
     chef.node_name       = 'looplay-develop'
     
-    chef.cookbooks_path  = 'chef/cookbooks'
     chef.roles_path      = 'roles'
     chef.data_bags_path  = 'data_bags' 
 
     chef.add_recipe 'apt'
-    chef.add_recipe 'git::default'
+    chef.add_recipe 'git'
     chef.add_recipe 'build-essential'
     chef.add_recipe 'zlib'
     chef.add_recipe 'rbenv::user'
     chef.add_recipe 'ruby_build'
     chef.add_recipe 'postgresql'
     chef.add_recipe 'zsh'
-    chef.add_recipe 'oh-my-zsh'
     chef.add_recipe 'tmux'
-    
+    chef.add_recipe 'dotfiles'
+
     chef.json = {
-      'oh-my-zsh' => {
-        'users' => [
-          {
-            :login   => 'vagrant',
-            :theme   => 'trapd00r',
-            :plugins => ['bundler', 'capistrano', 'gem', 'git', 'git-flow', 'github', 'postgres', 'rails3', 'rails4', 'rbenv', 'ruby', 'tmux']
-          }
-        ]
-      },
       'rbenv' => {
         'user_installs' => [
           {
@@ -64,6 +54,11 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         "password" => {
           "postgres" => "postgres"
         }
+      },
+      'dotfiles' => {
+        'user' => {
+          'name' => 'vagrant'
+        }
       }
     }
 
@@ -74,9 +69,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       'recipe[ruby_build]',
       'recipe[rbenv::user]',
       'recipe[zsh]',
-      'recipe[oh-my-zsh]',
       'recipe[postgresql]',
-      'recipe[tmux]'
+      'recipe[tmux]',
+      'recipe[dotfiles]'
     ]
 
    end

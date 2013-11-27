@@ -1,0 +1,32 @@
+site :opscode
+
+cookbook 'apt'
+cookbook 'git'
+cookbook 'build-essential'
+
+cookbook 'zlib',
+  git: 'git://github.com/opscode-cookbooks/zlib', :ref => '2.0.0'
+
+cookbook 'rbenv',
+  :git => 'git://github.com/fnichol/chef-rbenv.git', :ref => 'v0.7.2'
+
+cookbook 'postgresql',
+  :git => 'git://github.com/opscode-cookbooks/postgresql.git', :ref => 'v3.2.0'
+
+cookbook 'zsh',
+  :git => 'git://github.com/opscode-cookbooks/zsh.git', :ref => '1.0.0'
+
+cookbook 'tmux',
+  :git => 'git://github.com/opscode-cookbooks/tmux.git', :ref => 'v1.4.0'
+
+cookbook 'ruby_build',
+  :git => 'git://github.com/fnichol/chef-ruby_build.git', :ref => 'v0.8.0'
+
+cookbook 'users',
+  :git => 'git://github.com/opscode-cookbooks/users.git', :ref => 'v1.6.0'
+
+cookbook 'chef-solo-search',
+  :git => 'git://github.com/edelight/chef-solo-search.git', :ref => '0.5.1'
+
+cookbook 'dotfiles',
+  :git => 'https://github.com/blazeroot/dotfiles-cookbook'
